@@ -30,7 +30,7 @@ namespace valven_deneme.Service
             var url = $"repos/{owner}/{repo}/commits";
             _httpClient.DefaultRequestHeaders.Clear();
             _httpClient.DefaultRequestHeaders.Add("User-Agent", "GitHubApiClient");
-            _httpClient.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("Bearer", "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");
+            _httpClient.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("Bearer", "api_key");
             _httpClient.Timeout = TimeSpan.FromSeconds(30);
 
             var response = await _httpClient.GetAsync(url);
